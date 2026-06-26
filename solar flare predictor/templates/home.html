@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Enter Solar Parameters</h2>
+
+<form action="/predict" method="POST">
+
+    <label>Solar Wind Speed</label><br>
+    <input type="number" name="solar_wind"><br><br>
+
+    <label>X-Ray Flux</label><br>
+    <input type="number" step="any" name="xray_flux"><br><br>
+
+    <label>Proton Flux</label><br>
+    <input type="number" step="any" name="proton_flux"><br><br>
+
+    <label>Sunspot Number</label><br>
+    <input type="number" name="sunspot_number"><br><br>
+
+    <label>Magnetic Field</label><br>
+    <input type="number" name="magnetic_field"><br><br>
+
+    <button type="submit">
+
+        Analyze Solar Activity
+
+    </button>
+
+</form>
+
+{% endblock %}
