@@ -2,31 +2,66 @@
 
 {% block content %}
 
-<h2>Enter Solar Parameters</h2>
+<div class="main">
 
-<form action="/predict" method="POST">
+    <!-- LEFT SIDE -->
+    <div class="left">
 
-    <label>Solar Wind Speed</label><br>
-    <input type="number" name="solar_wind"><br><br>
+        <h2>Enter Solar Parameters</h2>
 
-    <label>X-Ray Flux</label><br>
-    <input type="number" step="any" name="xray_flux"><br><br>
+        <!-- Dashboard Cards -->
+        <div class="cards">
 
-    <label>Proton Flux</label><br>
-    <input type="number" step="any" name="proton_flux"><br><br>
+            <div class="card">
+                <h3>🌀 Solar Wind</h3>
+                <p>520 km/s</p>
+            </div>
 
-    <label>Sunspot Number</label><br>
-    <input type="number" name="sunspot_number"><br><br>
+            <div class="card">
+                <h3>☀️ X-Ray Flux</h3>
+                <p>3.4</p>
+            </div>
 
-    <label>Magnetic Field</label><br>
-    <input type="number" name="magnetic_field"><br><br>
+            <div class="card">
+                <h3>🌞 Sunspots</h3>
+                <p>185</p>
+            </div>
 
-    <button type="submit">
+        </div>
 
-        Analyze Solar Activity
+        <!-- Form -->
+        <form action="/predict" method="POST">
 
-    </button>
+            <label>Solar Wind Speed</label>
+            <input type="number" name="solar_wind">
 
-</form>
+            <label>X-Ray Flux</label>
+            <input type="number" step="any" name="xray_flux">
+
+            <label>Proton Flux</label>
+            <input type="number" step="any" name="proton_flux">
+
+            <label>Sunspot Number</label>
+            <input type="number" name="sunspot_number">
+
+            <label>Magnetic Field</label>
+            <input type="number" name="magnetic_field">
+
+            <button type="submit">
+                Analyze Solar Activity
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right">
+
+        <img src="{{ url_for('static', filename='images/satellites.jpg') }}" alt="Satellite">
+
+    </div>
+
+</div>
 
 {% endblock %}
