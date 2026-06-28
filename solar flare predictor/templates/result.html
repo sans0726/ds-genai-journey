@@ -1,9 +1,27 @@
 {% extends "base.html" %}
 
 {% block content %}
+
 <div class="prediction-card">
-<h2>Prediction Result</h2>
-<h1>{{ risk }}</h1>
+
+    <h2>Prediction Result</h2>
+
+    <h1>
+        {{ risk }}
+    </h1>
+
+    <h3>
+        Confidence : {{ probability }}%
+    </h3>
+
+    <br>
+
+    <a href="/">
+        <button>
+            🔄 Predict Again
+        </button>
+    </a>
+
 </div>
-<a href="/">Predict Again</a>
+
 {% endblock %}

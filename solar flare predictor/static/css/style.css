@@ -172,6 +172,28 @@ input:focus{
     box-shadow:0 0 15px #00d9ff;
 
 }
+select{
+    width:100%;
+    padding:16px;
+    margin-top:8px;
+    margin-bottom:18px;
+    border:none;
+    border-radius:10px;
+    background:rgba(255,255,255,0.1);
+    color:white;
+    outline:none;
+    font-size:16px;
+}
+
+select option{
+    background:#0b1d35;
+    color:white;
+}
+
+select:focus{
+    border:2px solid #00d9ff;
+    box-shadow:0 0 15px #00d9ff;
+}
 
 button{
     height:55px;

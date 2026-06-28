@@ -7,48 +7,100 @@
     <!-- LEFT SIDE -->
     <div class="left">
 
-        <h2>Enter Solar Parameters</h2>
+        <h2>Enter Active Region Parameters</h2>
 
         <!-- Dashboard Cards -->
         <div class="cards">
 
             <div class="card">
-                <h3>🌀 Solar Wind</h3>
-                <p>520 km/s</p>
+                <h3>☀️ Zurich Class</h3>
+                <p>Sunspot Classification</p>
             </div>
 
             <div class="card">
-                <h3>☀️ X-Ray Flux</h3>
-                <p>3.4</p>
+                <h3>🌞 Spot Size</h3>
+                <p>Largest Spot</p>
             </div>
 
             <div class="card">
-                <h3>🌞 Sunspots</h3>
-                <p>185</p>
+                <h3>🌍 Distribution</h3>
+                <p>Magnetic Structure</p>
             </div>
 
         </div>
 
-        <!-- Form -->
+        <!-- Prediction Form -->
         <form action="/predict" method="POST">
 
-            <label>Solar Wind Speed</label>
-            <input type="number" name="solar_wind">
+            <label>Modified Zurich Class</label>
+            <select name="modified_zurich_class" required>
+                <option value="">Select</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+                <option value="H">H</option>
+            </select>
 
-            <label>X-Ray Flux</label>
-            <input type="number" step="any" name="xray_flux">
+            <label>Largest Spot Size</label>
+            <select name="largest_spot_size" required>
+                <option value="">Select</option>
+                <option value="A">A</option>
+                <option value="H">H</option>
+                <option value="K">K</option>
+                <option value="R">R</option>
+                <option value="S">S</option>
+                <option value="X">X</option>
+            </select>
 
-            <label>Proton Flux</label>
-            <input type="number" step="any" name="proton_flux">
+            <label>Spot Distribution</label>
+            <select name="spot_distribution" required>
+                <option value="">Select</option>
+                <option value="C">C</option>
+                <option value="I">I</option>
+                <option value="O">O</option>
+                <option value="X">X</option>
+            </select>
 
-            <label>Sunspot Number</label>
-            <input type="number" name="sunspot_number">
+            <label>Activity</label>
+            <select name="activity" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
 
-            <label>Magnetic Field</label>
-            <input type="number" name="magnetic_field">
+            <label>Evolution</label>
+            <input type="number" min="0" name="evolution" required>
+
+            <label>Previous 24 Hour Flare Activity</label>
+            <input type="number" min="0" name="previous_flare_activity" required>
+
+            <label>Historically Complex</label>
+            <select name="historically_complex" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label>Became Complex On This Pass</label>
+            <select name="became_complex" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label>Area</label>
+            <input type="number" min="0" name="area" required>
+
+            <label>Area of Largest Spot</label>
+            <input type="number" min="0" name="largest_spot_area" required>
+
+            <label>Common Flares</label>
+            <input type="number" min="0" name="common_flares" required>
+
+            <label>Moderate Flares</label>
+            <input type="number" min="0" name="moderate_flares" required>
 
             <button type="submit">
-                Analyze Solar Activity
+                🚀 Predict Solar Flare
             </button>
 
         </form>
