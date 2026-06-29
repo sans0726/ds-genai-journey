@@ -317,3 +317,22 @@ nav a:hover{
     box-shadow:0 0 15px rgba(0,191,255,.2);
 
 }
+.success{
+    background:#1f8b4c;
+    color:white;
+    padding:15px;
+    margin-bottom:20px;
+    border-radius:10px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.error{
+    background:#d63031;
+    color:white;
+    padding:15px;
+    margin-bottom:20px;
+    border-radius:10px;
+    font-weight:bold;
+    text-align:center;
+}

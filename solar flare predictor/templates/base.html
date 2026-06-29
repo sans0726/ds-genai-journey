@@ -2,7 +2,7 @@
 <html>
 <head>
 
-    <title>ISRO Solar Flare Predictor</title>
+    <title>Solar Flare Predictor</title>
 
     <link rel="stylesheet"
           href="{{ url_for('static', filename='css/style.css') }}">
@@ -12,7 +12,7 @@
 <body>
 <nav>
 
-    <h2>ISRO Mission Control</h2>
+    <h2>Solar Flare Predictor</h2>
 
     <ul>
 
@@ -29,9 +29,24 @@
 </nav>
 <div class="container">
 
-    <h1>ISRO Solar Flare Predictor</h1>
+    <h1>Solar Flare Predictor</h1>
 
     <hr>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+
+    {% if messages %}
+
+        {% for category, message in messages %}
+
+            <div class="{{ category }}">
+                {{ message }}
+            </div>
+
+        {% endfor %}
+
+    {% endif %}
+
+{% endwith %}
 
     {% block content %}
     {% endblock %}
